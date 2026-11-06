@@ -3,42 +3,42 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Solid State Drive</title>
+        <title>Solid State Storage</title>
         <link rel="stylesheet" href="master.css">
     </head>
     <body>
         <header>
-            <h1>Solid State Drive</h1>
+            <h1>Solid State Storage</h1>
             <p class="authors"><strong>Project by: Torben Krahnstoever and Ava Williams</strong></p>
         </header>
         <nav>
             <a class="button" href="index.html">Home</a>
-            <a class="button active" href="solid-state.html" aria-current="page">Solid State</a>
+            <a class="button" href="solid-state.html">Solid State</a>
             <a class="button" href="hard-drive-disk.html">Hard Disk Drive</a>
             <a class="button" href="optical.html">Optical</a>
             <a class="button" href="tape.html">Tape</a>
             <a class="button" href="floppy.html">Floppy</a>
-            <a class="button" href="flash.html">Flash</a>
+            <a class="button active" href="flash.html" aria-current="page">Flash</a>
             <a class="button" href="optane.html">Optane</a>
         </nav>
         <main>
-            <p class="intro">Placeholder introduction to solid state drive.</p>
+            <p class="intro">Placeholder introduction to solid state storage.</p>
             <table class="info-table">
                 <tr>
                     <th>Use case</th>
-                    <td>Placeholder text.</td>
+                    <td>Boot and Operating system drives since operating systems tend to do a lot of random reads and writes to the drive, and SSDs are dramatically faster at that than other mediums. Laptops and anything that's portable and since SSDs do not having any moving parts one impact won't destroy any data. Database, VMs, and any server with hevey I/O. Where many users are due to high demand, SSDs can handle thousands of simultaneous requests with very little delay, so everyone gets fast responses. SSDs are less suited to storing huge amounts of rarely used data, since they cost more per terabyte than hard drives or tape, so they are usually paired with those for bulk storage. </td>
                 </tr>
                 <tr>
                     <th>Performance</th>
-                    <td>Placeholder text.</td>
+                    <td> SSDs have no moving parts, so they are far faster than hard drives and optical discs. A SATA SSD reads at about 550 MB/s, while NVMe drives reach roughly 3,500 to 14,000 MB/s depending on the PCIe generation. Access times are only tens of microseconds, compared with about 10 to 15 milliseconds for a hard drive and 100 to 200 milliseconds for optical media, which makes SSDs especially good at random access. Speeds can drop when a drive is nearly full or when a TLC or QLC drive’s fast write cache fills up during large transfers.</td>
                 </tr>
                 <tr>
                     <th>Data Longevity</th>
-                    <td>Placeholder text.</td>
+                    <td>Write endurance is the total amount of data an SSD can absorb before its flash cells wear out, because every write and erase slightly damages the cell’s insulation layer until it can no longer reliably hold data. For this a 1 TB TLC consumer drive typically is rated around 300-600 TBW (terabytes written). The average home user uses a small fraction of that, so wear rarely kills a drive in practice. For data retention, trapped charge slowly leaks out of the cells over time, especially at high temperatures and in heavily worn cells. The JEDEC consumer standard calls for a minimum of about one year of unpowered retention at 30 °C once a drive has reached the end of its rated life, while a new, lightly used drive stored at room temperature may retain data for several years, often estimated at 5-10 years. Because retention varies with temperature, wear, and cell type, an unpowered SSD is not a safe archive, so SSDs are best for active data, while optical discs, tape, or periodically refreshed drives are better for long-term cold storage.</td>
                 </tr>
                 <tr>
                     <th>How data is stored</th>
-                    <td>Placeholder text.</td>
+                    <td> SSDs store data in NAND flash memory, where each cell is a transistor with an insulated region that traps electrons. Writing forces electrons into that region with a high voltage, reading measures how the trapped charge shifts the transistor’s voltage, and erasing pushes the electrons back out. Cells can hold more than one bit by distinguishing multiple charge levels (for example, TLC stores 3 bits using 8 levels), and modern drives stack cells in vertical layers (3D NAND) to fit more data in less space. A built-in controller manages where data is placed, spreads wear evenly and corrects errors. </td>
                 </tr>
                 <tr>
                     <th>Other Information</th>
