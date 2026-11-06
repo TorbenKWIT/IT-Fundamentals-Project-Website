@@ -1,0 +1,173 @@
+/* Shared styles for every page. System fonts only (no external requests). */
+:root {
+    --bg: #f4f6f8;
+    --surface: #ffffff;
+    --text: #1d2430;
+    --muted: #5b6575;
+    --accent: #2f5d8a;
+    --accent-dark: #1f4266;
+    --border: #d5dbe3;
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--accent-dark);
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 0.25rem;
+    font-size: 2rem;
+}
+
+header .authors {
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* Top navigation bar */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Links styled as buttons, so navigation works without JavaScript */
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+}
+
+.button:hover,
+.button:focus-visible {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.button.active {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+main {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.intro {
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+/* Home page card grid */
+.medium-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.medium-card {
+    display: block;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color 0.15s, transform 0.15s;
+}
+
+.medium-card:hover,
+.medium-card:focus-visible {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.medium-card h2 {
+    margin: 0 0 0.5rem;
+    color: var(--accent);
+    font-size: 1.25rem;
+}
+
+.medium-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+/* Medium info table */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.info-table th,
+.info-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+}
+
+.info-table tr:last-child th,
+.info-table tr:last-child td {
+    border-bottom: none;
+}
+
+.info-table th {
+    width: 30%;
+    background: #eaeef3;
+}
+
+footer {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 40rem) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .info-table th,
+    .info-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .info-table th {
+        border-bottom: none;
+    }
+}

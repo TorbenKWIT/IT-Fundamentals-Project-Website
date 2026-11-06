@@ -1,0 +1,1 @@
+Our project will be a static website hosted on the Tor network. It will be a static HTML webpage with a navigation bar at the top with buttons for each storage medium (tape, optical, floppy, hard dive, solid state)
